@@ -1,0 +1,178 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p, li {
+    font-family: 'Minion Pro', 'Lato', sans-serif;
+}
+
+p, ul, ol, li, blockquote {
+    font-size: 1.2em;
+}
+
+h6 {
+    color: #aaa;
+    font-style: italic;
+    padding-top:1em;
+}
+
+.header {
+    text-align: center;
+    padding-bottom: 4em;
+    font-size: 1em;
+}
+
+.contacts {
+    font-size: 1.2em;
+    line-height: 1.6em;
+}
+
+.project-listing {
+    text-align: center;
+}
+
+.project-listing p {
+    font-size: 1em;
+}
+
+.project-title {
+    line-height: 1em;
+    font-size: 1em;
+}
+
+.project-wrap {
+    padding-bottom: 1em;
+}
+
+.project-content p {
+    font-size: 1.6em;
+    line-height: 1.8em;
+    color: #444;
+}
+
+h1.content-header {
+    font-size: 2em;
+}
+
+.content-header-description {
+    padding: 1em 0em;
+    font-style: italic;
+}
+
+.content-body p {
+    font-size: 1.6em;
+    padding: 0.4em 0em;
+}
+
+.content-highlight {
+    background-color: #e0e0e0;
+    font-style: italic;
+}
+
+.content-image {
+    padding-bottom: 1em;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.body-wrap {
+    margin: 5em 0.8em;
+}
+
+a {
+
+}
+
+a:link{
+    text-decoration: none;
+    color: #777;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #777;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #E33271;
+}
+
+.hero-text {
+    font-size: 2.4em;
+    line-height: 1.2em;
+    padding-bottom: 0.6em;
+}
+
+.call-out {
+    color: #E33271;
+}
+
+.back-button {
+    color: #aaa;
+}
+
+/* We use this media query to add styles to any device that supports media queries */
+
+@media only screen {}
+
+
+/* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 1025px) {
+    aside {
+        margin-left: -2em;
+    }
+    h3.call-out {
+        text-align: center;
+        font-size: 2.5em;
+        padding: 1em 0em;
+    }
+    .main-content p {
+        padding-left: 4.5%;
+    }
+    #g2t-android-research {
+        margin-top: -6em;
+    }
+    #empty-chat {
+        margin-top: -3em;
+    }
+    #idea-comment {
+        margin-top: 4em;
+    }
+}
+
+
+/* Used to alter styles for screens at least 1280px wide. */
+
+@media only screen and (min-width: 1280px) {}
+
+
+/* Used to alter styles for screens at least 1440px wide. */
+
+@media only screen and (min-width: 1440px) {}
+
+
+/* Apply styles to screens in landscape orientation */
+
+@media only screen and (orientation: landscape) {}
+
+
+/* Apply styles to screens in portrait orientation */
+
+@media only screen and (orientation: portrait) {}
+
+
+/* We also use Modernizr to add a .touch class to the body when applicable */
+
+
+/* You can prepend this class to anything and it will style only for touch devices */
+
+.touch .your-element {}

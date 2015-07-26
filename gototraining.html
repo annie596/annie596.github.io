@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoToTraining Android</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation-essential/5.5.1/css/foundation.min.css">
+    <link href="./style/style.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/headroom.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/jQuery.headroom.min.js"></script>
+    <script src="//use.typekit.net/zjr2ygg.js"></script>
+    <script>
+    try {
+        Typekit.load();
+    } catch (e) {}
+    </script>
+</head>
+
+<body>
+    <div class="body-wrap">
+        <div class="row">
+            <main class="columns small-12 large-offset-4 large-8 content-body">
+                <a href="./index.html"><h5 class="back-button">back</h5></a>
+                <h1><span class="content-header">GoToTraining Android</span></h1>
+                <p>
+                    <span class="content-header-description">
+                        GoToTraining Android app allows training attendees to attend live training from anywhere. As the design lead, I redesigned the app from Feburary to June 2015. </span>
+                </p>
+                <p>
+                    What is a great online training experience for learners? When I asked myself when I first started the project.
+                </p>
+            </main>
+        </div>
+        <div class="row">
+            <aside class="columns small-12 large-4" id="g2t-android-research">
+                <div class="row">
+                    <div class="columns small-6 large-12">
+                        <img src="resources/g2t-android/attendeeTakeaways.png">
+                        <h6>Notes from the attendee interview</h6>
+                    </div>
+                    <div class="columns small-6 large-12">
+                        <img src="resources/g2t-android/ia.png">
+                        <h6>Information architecture</h6>
+                    </div>
+                </div>
+            </aside>
+            <main class="columns small-12 large-8 content-body main-content">
+                <p>
+                    Analyzing 6 interviews with the online training attendees, I discovered 4 themes that will encourage learnig: asking questions, interacting with others, taking notes, and learning by doing. From site visits and interview with the trainer, <span class="content-highlight">engagement and interaction</span> are also the most important factors in determine if the training is successful.
+                </p>
+            </main>
+            <div class="row">
+                <div class="columns small-12 large-offset-2 large-8">
+                    <h3 class="call-out">How can we encourage interaction during the training?</h3>
+                </div>
+            </div>
+            <main class="columns small-12 large-offset-4 large-8 content-body">
+                <p>
+                    As the redesign project scope doesn't include functionality changes, I chose 2 existing function to focus on - <span class="content-highlight">chat and hand raise</span>.
+                </p>
+            </main>
+        </div>
+        <div class="row">
+            <main class="columns small-12 large-offset-4 large-8 content-body">
+                <p>
+                    After trying out possible layouts and discussing with developers, I narrowed down the direction. All the secondary functions are hidden in a right side panel.
+                </p>
+                <div style="padding:1em 0em;">
+                    <img src="resources/g2t-android/layou_explore.png">
+                    <h6>
+                    Layout exploration
+                </h6>
+                </div>
+            </main>
+            <main class="columns small-12 large-offset-4 large-8 content-body">
+                <p>
+                    I went further and started to think about how to make chat more prominent in the UI to encourage the uage.
+                </p>
+                <div style="padding:3em 0em;">
+                    <video width="350" height="400" autoplay loop>
+                        <source src="resources/g2t-android/corner_buttons.mov">
+                    </video>
+                    <h6>The 2 floating button for chat and hand raise catch attention from the attendees. When in full screen, the buttons move to the corner to create an immersive viewing experience.</h6>
+                </div>
+            </main>
+            <main class="columns small-12 large-offset-4 large-8 content-body">
+                <p>
+                    Combining the existing color palette and the material design guidelines, I created the visual theme for the app. During the visual exploartion, I spent some time on the iconography, and made sure that the icon works for color blind as well.
+                </p>
+                <div class="content-image">
+                    <img src="resources/g2t-android/icon.png" style="padding-top:1.5em;">
+                    <h6>Designing for accessibility</h6>
+                </div>
+            </main>
+        </div>
+        <div class="row">
+            <aside class="columns small-12 large-4">
+                <img src="resources/g2t-android/empty-chat.png" class="content-image" id="empty-chat">
+                <h6>The empty chat screen encourages the attendees to send chat messages.</h6>
+            </aside>
+            <main class="columns small-12 large-8 content-body">
+                <p>
+                    Beside the navigation refresh, I also added small details here and there (for example, in the empty chat screen and onboarding) in the app to encourage chat and hand raise.
+                </p>
+                <h3 class="call-out">
+                    There's significant improvement in the usage of chat and hand raise, comparing to metrics before.
+                </h3>
+                <p>
+                    Of course, this is just our MVP to our redesign. There are many other improvements throughout the app that the team is still working on.
+                </p>
+            </main>
+        </div>
+        <div class="row">
+            <div class="content-image" style="padding-top:2em;">
+            <img src="resources/g2t-android/data.png">
+            <h6>Metrics after the redesign comparing to the previous data</h6>
+        </div>
+        </div>
+    </div>
+</body>
+<!-- <footer>
+    <div class="row">
+        <hr>
+        <h5>Made by Annie Zhou in 2015</h5>
+    </div>
+</footer> -->
+
+</html>
