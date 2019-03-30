@@ -1,28 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Summary</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation-essential/5.5.1/css/foundation.min.css">
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Annie Zhou</title>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <link href="./style/style.css" rel="stylesheet">
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/headroom.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.7.0/jQuery.headroom.min.js"></script>
-</head>
+    
 
-<body>
+  </head>
+  <body>
     <div>
-        <h4>
-            Renowned production studio, Disney, is currently developing an African fairy tale movie “Sade” with Nigerian-American producer and director, Rick Famuyiwa.
-Sade, according to news from Disney over the weekend, will be centred on an African princess after the fashion of the commercially successful “Black Panther”.
-The movie was pitched by Nigerian writer, Ola Shokunbi and American writer, Lindsey Reed Palmer and was subsequently bought by Disney.
 
-            
-        </h4>
+    <div class='header'>      
+      <div id='top-nav'>
+        <ul>
+          <li class='nav' v-for='label in labels'>
+            <a v-bind:href='label.link'>{{label.text}}</a>
+          </li>
+        </ul>
+      </div>
     </div>
+
+    <div id='hero-intro'>
+      <div id='hero-title'>Annie Zhou</div>
+      <div id="hero-body">
+          <p>I'm an interaction designer at Google, working on products for the emerging markets.</p>
+          <p>
+            When I'm not designing, I paint a lot.
+          </p>
+      </div>
+      
+    </div>
+
+    </div>
+    
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="index.js"></script>    
 </body>
+
 </html>
