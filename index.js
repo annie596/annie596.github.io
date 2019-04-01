@@ -8,12 +8,12 @@ var app = new Vue({
         link: '' 
       },
       { 
-        text: 'Portfolio',
-        link: './portfolio' 
+        text: 'Linkedin',
+        link: 'https://www.linkedin.com/in/annieyezhou/'
       },
       { 
-        text: 'Contact',
-        link: '' 
+        text: 'Email me',
+        link: 'mailto:hello@anniezhou.me'
       }
     ]
   }

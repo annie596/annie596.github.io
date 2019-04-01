@@ -60,9 +60,9 @@ p, ul, ol, li, blockquote {
 .hero-body p{
     font-family: 'Playfair Display', serif;
     text-align: center;
-    max-width: 680px;
-    font-size: 32px;
-    padding: 12px 0;
+    max-width: 42.5em;
+    font-size: 2em;
+    padding: 1em 0;
 }
 
 li {
@@ -71,8 +71,7 @@ li {
 }
 
 .navlink {
-    font-weight: 400;
-    font-size: 1.2em;
+    font-size: 1.5em;
 }
 
 .nav {
@@ -89,21 +88,32 @@ ul {
     list-style-type: none;
 }
 
-.hero-body a:link{
+a:link{
     text-decoration: none;
     border-bottom: #e0e0e0;
     border-bottom-style: dotted;
+    color: #262728;
 }
 
 a:visited {
     text-decoration: none;
-    color: #555;
+    border-bottom: #e0e0e0;
+    border-bottom-style: dotted;
+    color: #262728;
 }
 
 a:hover {
     text-decoration: none;
-    color: #E33271;
-    transition: all ease-in-out .25s;
+    border-bottom-style: dotted;
+    color: #1285e9;
+}
+
+a:hover span { 
+    background-color:rgba(170, 233, 236, .35);
+    transition: all ease-in-out .15s;
+    -moz-border-radius: .5em; 
+    border-radius:.5em; 
+
 }
 
 .hero-text {
@@ -137,7 +147,7 @@ a:hover {
 
 .gallery-caption {
     font-family: 'Playfair Display', serif;
-    font-size: .95em;
+    font-size: 1.2em;
     text-align: center;
 }
 
@@ -183,29 +193,33 @@ a:hover {
 
 /* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
 
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+    #gallery {
+        padding-top: 2em;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-flow: column wrap;
+        align-content: center;
+    }
+    .gallery-item {
+        width: 60%;
+    }
+    .gallery-caption {
+        font-size: 1.8em;
+    }
+    .hero-body p{
+        max-width: 100%;
+        padding: .5em 0;
+    }
+    .hero-caption p {
+        font-size: 1.5em;
+        padding-bottom: .5em;
+    }
+}
 
 @media only screen and (min-width: 1025px) {
-    aside {
-        margin-left: -2em;
-    }
-    h3.call-out {
-        text-align: center;
-        font-size: 2.5em;
-        padding: 1em 0em;
-    }
-    .main-content p {
-        padding-left: 4.5%;
-    }
-    #g2t-android-research {
-        margin-top: -6em;
-    }
-    #empty-chat {
-        margin-top: -3em;
-    }
-    #idea-comment {
-        margin-top: 4em;
-    }
+
 }
 
 
