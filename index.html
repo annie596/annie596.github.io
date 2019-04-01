@@ -2,40 +2,84 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Annie Zhou</title>
+    <title>Annie Zhou's Portfolio</title>
+    
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <link href="./style/style.css" rel="stylesheet">
-    
-
   </head>
+  
   <body>
     <div>
+      <!-- <div class='header'>    
+        <div id='top-nav'>
+          <ul>
+            <li class='nav' v-for='label in navLabels' :key='label.text'>
+              <a :href='label.link'>{{label.text}}</a>
+            </li>
+          </ul>
+        </div>
+      </div> -->
 
-    <div class='header'>      
-      <div id='top-nav'>
-        <ul>
-          <li class='nav' v-for='label in labels'>
-            <a v-bind:href='label.link'>{{label.text}}</a>
-          </li>
-        </ul>
+      <div id='hero-intro'>
+        <div id='hero-title'>Annie Zhou</div>
+        <div class="hero-caption">
+          <p>A UX designer by day & an artist by night</p>
+          <p></p>
+        </div>
+        <div class="hero-body">
+            <p>I'm an interaction designer at Google, working on products for the emerging markets.</p>
+            <p>
+              When I'm not designing, I paint. I started a <a href="https://www.youtube.com/channel/UCnE5A9XMsRr8cC4TfnUDvhg" target="blank">Youtube channel</a> about painting recently.
+            </p>
+        </div>
       </div>
-    </div>
 
-    <div id='hero-intro'>
-      <div id='hero-title'>Annie Zhou</div>
-      <div id="hero-body">
-          <p>I'm an interaction designer at Google, working on products for the emerging markets.</p>
+      <div id='gallery'>
+        <div
+          v-for='item in gallery'
+          :style='item.style'
+          >
+          <template v-if="item.type === 'image'">
+            <img 
+              :src='item.src'
+              class='gallery-img'
+              :key='item.caption'
+              :alt='item.caption'>
+            </img> 
+          </template>
+          
+          <template v-else-if="item.type === 'video'">
+            <video
+              autoplay
+              preload="metadata"
+              loop
+              class='gallery-img' >
+              <source width="320px" height="240px" 
+                :src='item.src' type="video/mp4">
+            </video>
+          </template>
+
+            <p class='gallery-caption'>
+              {{ item.caption }}
+            </p>
+          
+          
+        </div>
+      </div>
+
+      <div id='footer'>
+        <div class="hero-body">
           <p>
-            When I'm not designing, I paint a lot.
-          </p>
+              I'm currently learning <a href="https://vuejs.org/" target="blank">Vue.js</a> and practicing on my portfolio.
+              Check again in a few weeks—I'm updateing with more cool projects!
+            </p>
+        </div>
       </div>
-      
-    </div>
-
     </div>
     
     <!-- Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- <script src="https://unpkg.com/vue-router@2.2.1"></script> -->
     <script src="index.js"></script>    
 </body>
 
