@@ -13,7 +13,7 @@ body {
     margin: 0 30px;
 }
 
-p, ul, ol, li, blockquote {
+p, ol, blockquote {
     font-size: 1em;
     list-style-type: none;
     margin: 0;
@@ -34,10 +34,21 @@ p, ul, ol, li, blockquote {
 .header {
     position: sticky;
     top: 0;
+    height: auto;
 }
 
 #top-nav {
     position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 0;
+}
+
+
+
+.nav li a {
+    font-size: 1.8em;
 }
 
 #hero-intro {
@@ -48,7 +59,6 @@ p, ul, ol, li, blockquote {
     position: relative;
     margin-left:auto;
     margin-right:auto;
-    margin-top: 3em;
     z-index: 100;
 }
 
@@ -60,13 +70,12 @@ p, ul, ol, li, blockquote {
 .hero-body p{
     font-family: 'Playfair Display', serif;
     text-align: center;
-    max-width: 42.5em;
-    font-size: 2em;
+    max-width: 25em;
+    font-size: 1.5em;
     padding: 1em 0;
 }
 
 li {
-    float: left;
     padding: 8px;
 }
 
@@ -74,10 +83,6 @@ li {
     font-size: 1.5em;
 }
 
-.nav {
-    display: flex;
-    justify-content: flex-end;
-}
 
 .hero-caption p {
     font-size: 1.5em;
@@ -86,6 +91,7 @@ li {
 
 ul {
     list-style-type: none;
+    margin-top: 2em;
 }
 
 a:link{
@@ -93,6 +99,8 @@ a:link{
     border-bottom: #e0e0e0;
     border-bottom-style: dotted;
     color: #262728;
+    background-color: white;
+    padding: 8px 0 2px 0;
 }
 
 a:visited {
@@ -117,7 +125,7 @@ a:hover span {
 }
 
 .hero-text {
-    font-size: 2.8em;
+    font-size: 2.2em;
     line-height: 1.2em;
     padding-bottom: 0.6em;
 }
@@ -193,7 +201,7 @@ a:hover span {
 
 /* Used to alter styles for screens at least 768px wide. This is where the grid changes. */
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
     #gallery {
         padding-top: 2em;
         display:flex;
@@ -213,9 +221,21 @@ a:hover span {
         padding: .5em 0;
     }
     .hero-caption p {
-        font-size: 1.5em;
+        font-size: 1.2em;
         padding-bottom: .5em;
     }
+    .header {
+        position: relative;
+        width: 100%;
+    }
+    .nav{
+        font-size: 1.6em;
+    }
+    #top-nav {
+        display: flex;
+        flex-direction: column;
+    }
+
 }
 
 @media only screen and (min-width: 1025px) {

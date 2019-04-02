@@ -20,13 +20,11 @@
   <body>
     <div>
       <div class='header'>    
-        <div id='top-nav'>
-          <ul>
+          <ul id='top-nav'>
             <li class='nav' v-for='label in navLabels' :key='label.text'>
               <a :href='label.link'><span>{{label.text}}</span></a>
             </li>
           </ul>
-        </div>
       </div>
 
       <div id='hero-intro'>
