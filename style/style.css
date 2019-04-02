@@ -7,6 +7,7 @@ h5,
 h6,
 p, li, a {
     font-weight: 400;
+    transition: all ease-in-out .15s;
 }
 
 body {
@@ -99,7 +100,6 @@ a:link{
     border-bottom: #e0e0e0;
     border-bottom-style: dotted;
     color: #262728;
-    background-color: white;
     padding: 8px 0 2px 0;
 }
 
