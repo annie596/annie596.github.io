@@ -31,7 +31,6 @@
         <div id='hero-title'>Annie Zhou</div>
         <div class="hero-caption">
           <p>A UX designer by day & an artist by night</p>
-          <p></p>
         </div>
         <div class="hero-body">
             <p>I'm an interaction designer at Google, working on products for the emerging markets.</p>
@@ -45,31 +44,35 @@
         <div class='gallery-item'
           v-for='item in gallery'
           :style='item.style'
+          @mouseover='enlargeImg'
           >
-          <template v-if="item.type === 'image'">
-            <img 
-              :src='item.src'
-              class='gallery-img'
-              :key='item.caption'
-              :alt='item.caption'>
-            </img> 
-          </template>
-          
-          <template v-else-if="item.type === 'video'">
-            <video
-              autoplay
-              preload="metadata"
-              loop
-              class='gallery-img' >
-              <source width="320px" height="240px" 
-                :src='item.src' type="video/mp4">
-            </video>
-          </template>
-
-          <p class='gallery-caption'>
-            {{ item.caption }}
-          </p>
-
+          <transition v-if="isZoomed" name="zoom"></transition>
+            <!-- <a 
+              :href="item.to"> -->
+              <template v-if="item.type === 'image'">
+                <img 
+                  :src='item.src'
+                  class='gallery-img'
+                  :key='item.caption'
+                  :alt='item.caption'>
+                </img> 
+              </template>
+              
+              <template v-else-if="item.type === 'video'">
+                <video
+                  autoplay
+                  preload="metadata"
+                  loop
+                  class='gallery-img' >
+                  <source width="320px" height="240px" 
+                    :src='item.src' type="video/mp4">
+                </video>
+              </template>
+              <p class='gallery-caption'>
+                {{ item.caption }}
+              </p>
+            <!-- </a> -->
+          </transition>
         </div>
       </div>
 

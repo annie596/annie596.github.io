@@ -1,4 +1,3 @@
-
 var app = new Vue({
   el: '#top-nav',
   data: {
@@ -11,10 +10,6 @@ var app = new Vue({
         text: 'Linkedin',
         link: 'https://www.linkedin.com/in/annieyezhou/'
       },
-      { 
-        text: 'Email me',
-        link: 'mailto:hello@anniezhou.me'
-      }
     ]
   }
 }
@@ -24,7 +19,8 @@ var gallery = new Vue({
   el: '#gallery',
   methods: { 
     enlargeImg: function () {
-      this.isZoomed = !this.isZoomed
+      this.isZoomed = true
+      console.log(this.isZoomed)
     }
   },
   data: {
@@ -35,7 +31,7 @@ var gallery = new Vue({
         type: 'video',
         caption: 'Google Assistant',
         style: {
-          gridArea: '13 / 8 / span 6 / span 5'
+          gridArea: '12 / 8 / span 6 / span 5'
         },
         to: ''
       },
@@ -49,11 +45,11 @@ var gallery = new Vue({
         to:'https://play.google.com/store/apps/details?id=com.google.android.apps.searchlite&hl=en_US'
       },
       {
-        src: './resources/img/grandcanal-venice.jpg',
+        src: './resources/img/postcards.jpg',
         type: 'image',
-        caption: 'Grand Canal in Venice',
+        caption: 'Red Glasses Europe Travel Postcards',
         style: {
-          gridArea: '4 / 11 / span 7 / span 5 '
+          gridArea: '6 / 10 / span 4 / span 6 '
         },
         to:''
       },
@@ -62,15 +58,24 @@ var gallery = new Vue({
         type: 'image',
         caption: 'Edinburgh, Scotland',
         style: {
-          gridArea: ' 10 / 3 / span 7 / span 3 '
+          gridArea: ' 14 / 3 / span 7 / span 3 '
         }
       },
       {
-        src: './resources/img/stpaul.jpg',
-        type: 'image',
-        caption: 'St Paul\'s Cathedral',
+        src: './resources/g2t/screenview.mov',
+        type: 'video',
+        caption: 'Citrix GoToTraining',
         style: {
-          gridArea: ' 20 / 5 / span 8 / span 10 '
+          gridArea: ' 22 / 5 / span 4 / span 5 '
+        },
+        to:'./gototraining.html'
+      },
+      {
+        src: './resources/img/drawingwords.png',
+        type: 'image',
+        caption: 'Drawing words with Annie',
+        style: {
+          gridArea: ' 20 / 11 / span 3 / span 4'
         },
         to:''
       },
